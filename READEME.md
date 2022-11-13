@@ -123,33 +123,33 @@
 
 *Operadores*
 
-    - Aritméticos
+- Aritméticos
 
-        - Soma (+)
+    - Soma (+)
 
             let a: number = 2
             let soma: number = a + a
             console.log(soma) // 4
         
-        - Subtração (-)
+    - Subtração (-)
 
             let a: number = 2
             let soma: number = a - a
             console.log(soma) // 0
         
-        - Multiplicação (*)
+    - Multiplicação (*)
 
             let a: number = 2
             let soma: number = a * a
             console.log(soma) // 4
         
-        - Divisão (/)
+    - Divisão (/)
 
             let a: number = 2
             let soma: number = a / a
             console.log(soma) // 1
         
-        - Módulo (%)
+    - Módulo (%)
         - Resto da divisão
 
             let a: number = 2
