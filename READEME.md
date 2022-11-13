@@ -172,114 +172,114 @@
     - Incremento (++)
         - Soma +1 ao número
 
-            //Com o operador depois da variável o resultado da operação
-            //será o valor antes da soma.
+                //Com o operador depois da variável o resultado da operação
+                //será o valor antes da soma.
 
-            let a: number = 10;
+                let a: number = 10;
 
-            //O valor continuará sendo 10
-            console.log(a++);
+                //O valor continuará sendo 10
+                console.log(a++);
 
-            //Apenas aqui o valor será 11
-            console.log(a);
+                //Apenas aqui o valor será 11
+                console.log(a);
 
-            //Ao utilizar o operador antes da variável o resultado é diferente,
-            //pois o resultado será mostrado após a soma, sendo assim:
+                //Ao utilizar o operador antes da variável o resultado é diferente,
+                //pois o resultado será mostrado após a soma, sendo assim:
 
-            let a: number = 10;
+                let a: number = 10;
 
-            //O valor será 11
-            console.log(++a);
+                //O valor será 11
+                console.log(++a);
 
     - Decremento (--)
         - Remove 1 do número
 
-            //Com o operador depois da variável o resultado da operação
-            //será o valor antes da subtração.
+                //Com o operador depois da variável o resultado da operação
+                //será o valor antes da subtração.
 
-            let a: number = 10;
+                let a: number = 10;
 
-            //O valor contiuará sendo 10
-            console.log(a--);
+                //O valor contiuará sendo 10
+                console.log(a--);
 
-            //Apenas aqui o valor será 9
-            console.log(a);
+                //Apenas aqui o valor será 9
+                console.log(a);
 
-            //Ao utilizar o operador antes da variável o resultado é diferente,
-            //pois o resultado será mostrado após a subtração, sendo assim:
+                //Ao utilizar o operador antes da variável o resultado é diferente,
+                //pois o resultado será mostrado após a subtração, sendo assim:
 
-            let a: number = 10;
+                let a: number = 10;
 
-            //O valor será 9
-            console.log(--a);
+                //O valor será 9
+                console.log(--a);
 
     - Concatenação
         - Junta duas strings
 
-            let hello = 'hello ';
-            let world = 'world'
+                let hello = 'hello ';
+                let world = 'world'
 
-            let texto = hello + world;
+                let texto = hello + world;
 
-            //O resultado será hello world
-            console.log(texto)
+                //O resultado será hello world
+                console.log(texto)
 
-            let quantidade: number = 1;
-            let objeto: string = " carro";
+                let quantidade: number = 1;
+                let objeto: string = " carro";
 
-            let conteudo = quantidade + objeto;
+                let conteudo = quantidade + objeto;
 
-            //O resultado será '1 carro'
-            console.log(conteudo)
+                //O resultado será '1 carro'
+                console.log(conteudo)
 
 - Atribuição
 
     - Igualdade (=)
         - Atribui um valor a uma variável de qualquer tipo
 
-            let counter: number = 0;
-            let name: string = "Hatsune Miku";
-            let bool: boolean = true;
+                let counter: number = 0;
+                let name: string = "Hatsune Miku";
+                let bool: boolean = true;
         
     - Soma e atribuição (+=)
         - Soma os valores e atribui o resultado à variável determinada
 
-            let a = 2;
-            let b = 3;
+                let a = 2;
+                let b = 3;
 
-            a += b;
+                a += b;
 
-            console.log(a); //Resultado é 5
+                console.log(a); //Resultado é 5
             
     - Subtração e atribuição (-=)
         - Subtrai os valores e atribui o resultado à variável determinada
 
-            let a = 2;
-            let b = 3;
+                let a = 2;
+                let b = 3;
 
-            a -= b;
+                a -= b;
 
-            console.log(a); //Resultado é -1
+                console.log(a); //Resultado é -1
 
     - Multiplicação e atribuição (*=)
         - Multiplica os valores e atribui o resultado à variável determinada
 
-            let a = 2;
-            let b = 3;
+                let a = 2;
+                let b = 3;
 
-            a *= b;
+                a *= b;
 
-            console.log(a); //Resultado é 6
+                console.log(a); //Resultado é 6
 
     - Divisão e atribuição (/=)
         - Divide os valores e atribui o resultado à variável determinada
 
-            let a = 6;
-            let b = 2;
+                let a = 6;
+                let b = 2;
 
-            a /= b;
+                a /= b;
 
-            console.log(a); //Resultado é 3
+                console.log(a); //Resultado é 3
     
 - Relacionais
 
