@@ -392,4 +392,46 @@
 
             console.log(resultado); //Retorna true
             
-    Comparação de 
+    Comparação de igualdade
+        - Verifica se uma variável possui o mesmo valor que outra
+
+                let a: number = 2;
+                let b: number = 2;
+
+                let resultado;
+
+                resultado = a == b;
+
+                //Retorna true
+                console.log(resultado)
+
+                let a: number = 2;
+                let b: number = 5;
+
+                let resultado;
+
+                resultado = a == b;
+
+                console.log(resultado) //Retorna false
+    
+    - Comparaçãod e diferença
+        - Verifica se uma variável não possui o mesmo valor que outra
+
+                let a: number = 2;
+                let b: number = 2;
+
+                let resultado;
+
+                resultado = a != b;
+
+                //Retorna false
+                console.log(resultado)
+
+                let a: number = 2;
+                let b: number = 5;
+
+                let resultado;
+
+                resultado = a != b;
+
+                console.log(resultado) //Retorna true
