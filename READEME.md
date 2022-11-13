@@ -170,7 +170,7 @@
 - Incremento e Decremento
 
     - Incremento (++)
-    - Soma +1 ao número
+        - Soma +1 ao número
 
             //Com o operador depois da variável o resultado da operação
             //será o valor antes da soma.
@@ -192,7 +192,7 @@
             console.log(++a);
 
     - Decremento (--)
-    - Remove 1 do número
+        - Remove 1 do número
 
             //Com o operador depois da variável o resultado da operação
             //será o valor antes da subtração.
@@ -214,7 +214,7 @@
             console.log(--a);
 
     - Concatenação
-    - Junta duas strings
+        - Junta duas strings
 
             let hello = 'hello ';
             let world = 'world'
@@ -235,14 +235,14 @@
 - Atribuição
 
     - Igualdade (=)
-    - Atribui um valor a uma variável de qualquer tipo
+        - Atribui um valor a uma variável de qualquer tipo
 
             let counter: number = 0;
             let name: string = "Hatsune Miku";
             let bool: boolean = true;
         
     - Soma e atribuição (+=)
-    - Soma os valores e atribui o resultado à variável determinada
+        - Soma os valores e atribui o resultado à variável determinada
 
             let a = 2;
             let b = 3;
@@ -252,7 +252,7 @@
             console.log(a); //Resultado é 5
             
     - Subtração e atribuição (-=)
-    - Subtrai os valores e atribui o resultado à variável determinada
+        - Subtrai os valores e atribui o resultado à variável determinada
 
             let a = 2;
             let b = 3;
@@ -262,7 +262,7 @@
             console.log(a); //Resultado é -1
 
     - Multiplicação e atribuição (*=)
-    - Multiplica os valores e atribui o resultado à variável determinada
+        - Multiplica os valores e atribui o resultado à variável determinada
 
             let a = 2;
             let b = 3;
@@ -272,7 +272,7 @@
             console.log(a); //Resultado é 6
 
     - Divisão e atribuição (/=)
-    - Divide os valores e atribui o resultado à variável determinada
+        - Divide os valores e atribui o resultado à variável determinada
 
             let a = 6;
             let b = 2;
