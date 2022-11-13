@@ -435,3 +435,50 @@
                 resultado = a != b;
 
                 console.log(resultado) //Retorna true
+
+- Lógicos
+
+    - E ou AND (&&)
+        - Operador para validar se mais de um critério está sendo cumprido em uma comparação
+
+                let a: number = 5;
+                let b: number = 6;
+                let c: number = 7;
+
+                let retornaTrue: boolean = a < b && c > b;
+                let retornaFalse: boolean = a < b && b > c;
+
+                //Resultado será true porque a é Menor que b e c é maior que b.
+                console.log(retornaTrue);
+
+                //Resultado será false, pois apesar de a ser Menor que b ,
+                //b não é maior que c.
+                console.log(retornaFalse);
+    
+    - Ou ou OR (||)
+        - Operador para validar se ao menos um critério está sendo cumprindo em uma comparação
+
+                let a: number = 5;
+                let b: number = 6;
+                let c: number = 7;
+
+                //Retorna 'true' ainda que b não seja maior que c.
+                //Pois a é menor que b e isso valida o 'Or'.
+                let retornaTrue: boolean = a < b || b > c;
+
+                //Retorna 'false' pois nenhuma das duas condições retornou 'true'.
+                //a não é maior que b e b não é maior que c.
+                let retornaFalse: boolean = a > c || b > c;
+
+    - Não ou NOT (!)
+        - Operador que inverte o resultado de uma expressão booleana
+
+                let trueBool = true;
+
+                let falseBool = !trueBool;
+
+                //Retorna true
+                console.log(trueBool);
+
+                //Retorna false
+                console.log(falseBool);
