@@ -158,19 +158,19 @@
 
 *Precedência de operadores*
 
-    - Ordem de prioridade em uma operação
+- Ordem de prioridade em uma operação
 
             (*, /, %) > (+, -)
     
-    - Para alterar a ordem de precedência, basta englobar por parênteses o que é desejado ser operado antes
+- Para alterar a ordem de precedência, basta englobar por parênteses o que é desejado ser operado antes
 
             5 + 8 / 2 //RESULTADO: 9
             (5 + 8) / 2 //RESULTADO: 6.5
 
-    - Incremento e Decremento
+- Incremento e Decremento
 
-        - Incremento (++)
-        - Soma +1 ao número
+    - Incremento (++)
+    - Soma +1 ao número
 
             //Com o operador depois da variável o resultado da operação
             //será o valor antes da soma.
@@ -191,8 +191,8 @@
             //O valor será 11
             console.log(++a);
 
-        - Decremento (--)
-        - Remove 1 do número
+    - Decremento (--)
+    - Remove 1 do número
 
             //Com o operador depois da variável o resultado da operação
             //será o valor antes da subtração.
@@ -213,8 +213,8 @@
             //O valor será 9
             console.log(--a);
 
-        - Concatenação
-        - Junta duas strings
+    - Concatenação
+    - Junta duas strings
 
             let hello = 'hello ';
             let world = 'world'
@@ -232,55 +232,164 @@
             //O resultado será '1 carro'
             console.log(conteudo)
 
-    - Atribuição
+- Atribuição
 
-        - Igualdade (=)
-        - Atribui um valor a uma variável de qualquer tipo
+    - Igualdade (=)
+    - Atribui um valor a uma variável de qualquer tipo
 
             let counter: number = 0;
             let name: string = "Hatsune Miku";
             let bool: boolean = true;
         
-        - Soma e atribuição (+=)
-        - Soma os valores e atribui o resultado à variável determinada
+    - Soma e atribuição (+=)
+    - Soma os valores e atribui o resultado à variável determinada
 
             let a = 2;
             let b = 3;
 
             a += b;
 
-            //Resultado é 5
-            console.log(a);
+            console.log(a); //Resultado é 5
             
-        - Subtração e atribuição (-=)
-        - Subtrai os valores e atribui o resultado à variável determinada
+    - Subtração e atribuição (-=)
+    - Subtrai os valores e atribui o resultado à variável determinada
 
             let a = 2;
             let b = 3;
 
             a -= b;
 
-            //Resultado é -1
-            console.log(a);
+            console.log(a); //Resultado é -1
 
-        - Multiplicação e atribuição (*=)
-        - Multiplica os valores e atribui o resultado à variável determinada
+    - Multiplicação e atribuição (*=)
+    - Multiplica os valores e atribui o resultado à variável determinada
 
             let a = 2;
             let b = 3;
 
             a *= b;
 
-            //Resultado é 6
-            console.log(a);
+            console.log(a); //Resultado é 6
 
-        - Divisão e atribuição (/=)
-        - Divide os valores e atribui o resultado à variável determinada
+    - Divisão e atribuição (/=)
+    - Divide os valores e atribui o resultado à variável determinada
 
             let a = 6;
             let b = 2;
 
             a /= b;
 
-            //Resultado é 3
-            console.log(a);
+            console.log(a); //Resultado é 3
+    
+- Relacionais
+
+    - Maior que (>)
+
+            let a: number = 5;
+            let b: number = 2;
+
+            let resultado;
+
+            resultado = a > b;
+
+            //Retorna true
+            console.log(resultado)
+
+            let a: number = 2;
+            let b: number = 5;
+
+            let resultado;
+
+            resultado = a > b;
+
+            console.log(resultado) //Retorna false
+        
+    - Menor que (<)
+
+            let a: number = 5;
+            let b: number = 2;
+
+            let resultado;
+
+            resultado = a < b;
+
+            //Retorna false
+            console.log(resultado)
+
+            let a: number = 2;
+            let b: number = 5;
+
+            let resultado;
+
+            resultado = a < b;
+
+            console.log(resultado) //Retorna true
+
+    Maior ou igual (>=)
+
+            let a: number = 5;
+            let b: number = 2;
+
+            let resultado;
+
+            resultado = a >= b;
+
+            console.log(resultado) //Retorna true
+
+            let a: number = 5;
+            let b: number = 5;
+
+            let resultado;
+
+            resultado = a >= b;
+
+            console.log(resultado) //Retorna true
+
+            let a: number = 5;
+            let b: number = 2;
+
+            let resultado;
+
+            resultado = a > b;
+
+            console.log(resultado) //Retorna true
+
+            let a: number = 2;
+            let b: number = 5;
+
+            let resultado;
+
+            resultado = a > b;
+
+            console.log(resultado) //Retorna false
+        
+    Menor ou igual (<=)
+
+            let a: number = 5;
+            let b: number = 2;
+
+            let resultado;
+
+            resultado = a <= b;
+
+            console.log(resultado); //Retorna false
+
+            let a: number = 2;
+            let b: number = 5;
+
+            let resultado;
+
+            resultado = a <= b;
+
+            console.log(resultado); //Retorna true
+
+            let a: number = 2;
+            let b: number = 2;
+
+            let resultado;
+
+            resultado = a <= b;
+
+            console.log(resultado); //Retorna true
+            
+    Comparação de 
