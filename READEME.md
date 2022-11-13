@@ -325,7 +325,7 @@
 
             console.log(resultado) //Retorna true
 
-    Maior ou igual (>=)
+    - Maior ou igual (>=)
 
             let a: number = 5;
             let b: number = 2;
@@ -363,7 +363,7 @@
 
             console.log(resultado) //Retorna false
         
-    Menor ou igual (<=)
+    - Menor ou igual (<=)
 
             let a: number = 5;
             let b: number = 2;
@@ -392,7 +392,7 @@
 
             console.log(resultado); //Retorna true
             
-    Comparação de igualdade
+    - Comparação de igualdade
         - Verifica se uma variável possui o mesmo valor que outra
 
                 let a: number = 2;
