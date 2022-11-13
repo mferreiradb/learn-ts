@@ -152,9 +152,9 @@
     - Módulo (%)
         - Resto da divisão
 
-            let a: number = 2
-            let soma: number = a % a
-            console.log(soma) // 0
+                let a: number = 2
+                let soma: number = a % a
+                console.log(soma) // 0
 
 *Precedência de operadores*
 
