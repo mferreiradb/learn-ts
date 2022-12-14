@@ -746,3 +746,29 @@
 - Diferença sintatica
 
 - Interface é mais utilizado para POO, porém os objetivos são os mesmos
+
+*Programação Orientada a Objetos*
+
+- Abstração
+
+- Herança
+
+- Polimorfismo
+
+- Encapsulamento
+
+- Classes
+
+        - Possui atributos e funções
+
+        - Tipo de dado mais geral
+
+                - class Pessoa
+
+- Objetos
+
+        - Instancia de classe
+
+                - let Mauricio = new Pessoa
+
+                - Herda as propriedades e funções da classe instanciada
