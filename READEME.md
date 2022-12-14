@@ -624,3 +624,29 @@
                 let userRes = {} as UserResponse;
 
 
+*Objetos*
+
+- Cria-se um type, que terá como valor um objeto e informamos o tipo de cada propriedade do objeto
+
+- Os objetos relacionados a este, recebem o tipo do type definido
+
+                type Point= {
+                        x: number;
+                        y: number;
+                }
+
+                function printCoord(points: Point): void {
+                        console.log(`O eixo x é: ${points.x} e o eixo y é: ${points.y}`)
+                }
+
+                printCoord({x: 12, y: 10});
+                //
+                //
+                type User= {
+                        id: number;
+                        login: string;
+                        password: string;
+                        isAdmin: boolean;
+                }
+
+                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123', isAdmin: true};
