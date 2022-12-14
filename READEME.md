@@ -2,11 +2,25 @@
 
 - Instala-se como um pacote node
 
-            npm install -g typescript
+                npm install -g typescript
+
+- Para gerar tsconfig
+
+                tsc init
 
 - Para ser executado no navegador, é necessário compilar o código escrito em TS para JS
 
-            tsc arquivo.ts
+                tsc arquivo.ts
+
+- Para manter a compilação em tempo real / enquando está desenvolvendo
+
+                tsc -w
+
+- Para rodar o arquivo ts sem precisar compilar
+
+                npm i -g ts-node
+        
+        - Para rodar os arquivos, usa-se ts-node [arquivo] no lugar de node [arquivo]
 
 *Declaração de variável*
 
@@ -763,12 +777,104 @@
 
         - Tipo de dado mais geral
 
-                - class Pessoa
+        - Pode ter o valor das propriedades inicializado no ato da ceclaração
+
+                export class Personagem {
+                        nome?: string = '';
+                        energia?: number = 0;
+                        ataque?: number = 0;
+                        defesa?: number = 0;
+                }
+
+                let Sansa: Personagem = new Personagem;
+
+                Sansa.nome = 'Sansa'
 
 - Objetos
 
         - Instancia de classe
 
+        - Diz-se que a criaão de um objeto é uma instanciação (instanciar um objeto)
+
                 - let Mauricio = new Pessoa
 
                 - Herda as propriedades e funções da classe instanciada
+
+- Método Construtor
+
+        - Só pode ser chamado uma vez por objeto
+
+        - Define como um objeto é inicializado
+
+        - Caso não seja definido explcitamente, o TS inferirá que o construtor segue o padrão
+
+                export class Personagem {
+                        nome?: string = '';
+                        energia?: number = 0;
+                        ataque?: number = 0;
+                        defesa?: number = 0;
+
+                        constructor() {}
+                }
+
+        - Define-se os valores iniciais de um objeto instanciado com o uso de this.[variável]
+
+                class Personagem {
+                        nome?: string = '';
+                        energia?: number = 0;
+                        ataque?: number = 0;
+                        defesa?: number = 0;
+
+                        constructor() {
+                        this.energia = 12
+                        }
+                }
+
+                let Sansa: Personagem = new Personagem;
+
+                Sansa.nome = 'Sansa'
+                Sansa.ataque = 20
+                Sansa.defesa = 40
+
+                console.log(Sansa)
+
+        - Ao definir o construtor, podemos definir propriedades como obrigatórias. Caso feito, deve ser passado o valor dessa propriedade dentro do construtor no ato da declaração e na instanciação do objeto
+
+                class Personagem {
+                        nome: string = '';
+                        energia: number = 0;
+                        ataque: number = 0;
+                        defesa: number = 0;
+
+                        constructor(nome: string) {
+                        this.energia = 12
+                        this.nome = nome
+                        }
+                }
+
+                let Sansa: Personagem = new Personagem('Sansa');
+
+                Sansa.ataque = 20
+                Sansa.defesa = 40
+
+                console.log(Sansa)
+        
+        - Podemos declarar os atributos de uma classe no construtor, sem que precisemos definir dentro da própria classe. Dessa forma também faz-se necessária a definição dos valores na instanciação do objeto. Dessa forma também não se faz mais necessário passar os valores através de this
+
+                class Personagem {
+
+                constructor(
+                        public nome: string,
+                        public energia: number,
+                        public ataque: number,
+                        public defesa: number,
+                ) {}
+                }
+                
+                let nome = 'Mauricio'
+                
+                let Sansa: Personagem = new Personagem('Sansa', 12, 34, 65);
+                
+                let Mauricio: Personagem = new Personagem(nome, 32, 54, 100)
+                console.log(Sansa)
+                console.log(Mauricio)
