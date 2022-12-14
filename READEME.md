@@ -121,6 +121,34 @@
             create(false); // Erro
             create(undefined); // Erro
 
+*Tipagem de funções*
+
+- Uma função pode ou não ter um retorno. Quando uma função não possui retorno, a função é do tipo void
+
+        - Quando não passamos este parametro e a função não tem retorno, é inferido o tipo void
+
+                                const showMessage = (message: string): void => {
+                                console.log(message)
+                                }
+
+                                showMessage('Olá') 
+
+- Quando uma função possui retorno, a função recebe um tipo determinado do retorno
+
+        - Quando não passamos este parametro, é inferido o tipo da função
+
+                                const showMessage = (message: string): string => {
+                                return message
+                                }
+
+                                showMessage(showMessage('Olá'))
+
+                                const showMessage = (message: string) => {
+                                return message
+                                }
+
+                                showMessage(showMessage('Olá'))
+
 *Operadores*
 
 - Aritméticos
@@ -482,3 +510,80 @@
 
                 //Retorna false
                 console.log(falseBool);
+
+- Union (|)
+
+        - Determina que uma variável pode ter mais de um tipo
+
+                const printId = (id: number | string) => {
+                console.log(`O ID do usuário é: ${id}`)
+                }
+
+                printId(12)
+                printId('A')
+
+                let ids: (string | number)[] = [
+                        'A',
+                        1
+                ] 
+
+                console.log(ids)
+
+*Generics*
+
+- Utilizado para deixar a tipagem flexível
+
+- Declara-se com <>
+
+- Declara-se um generic utilizando uma letra qualquer em maiúsculo. Este tipo faz com que qualquer tipo de dado serja atribuido à variável
+
+- Um generic pode receber tipos primitivos adicionando *extends*
+
+- Após a declaração de generic, pode-se declarar um tipo primitivo
+
+        - Ao declarar um generic como tipo determinado para uma variável, a partir daquele ponto ela só poderpa ser do tipo declarado
+
+                function useState<T>(){
+                let state: T;
+
+                function get() {
+                        return state;
+                }
+
+                function set(newValue: T) {
+                        state = newValue
+                }
+
+                return {get, set}
+                }
+
+                let newState = useState<string>();
+
+                newState.get();
+                newState.set(123); //GERA ERRO
+                newState.set('Mauricio');
+                //
+                //
+                function useState<T extends number | string>(){
+                let state: T;
+
+                function get() {
+                        return state;
+                }
+
+                function set(newValue: T) {
+                        state = newValue
+                }
+
+                return {get, set}
+                }
+
+                let newState = useState<string>();
+
+                newState.get();
+                newState.set(123); GERA ERRO
+                newState.set('Mauricio');
+
+- Pode-se adicionar uma regra que faça com que o Generic assuma um determinado tipo caso o desenvolvedor não o faça, basta utilizar o oiperador de atribuição na declaração do generic
+
+                function useState<T extends number | string = string>(){
