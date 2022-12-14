@@ -684,6 +684,8 @@
 
         - Cria-se um novo type, que será a união de todos os types desejados, de forma que o objeto criado com o novo type, passa a poder receber as propriedades de todos os types unidos
 
+- Cria-se o novo tipo usando o operador de atribuição, atribuindo os types desejados através do simbodo &
+
                 type User= {
                         id: number;
                         login: string;
@@ -697,3 +699,11 @@
                 }
 
                 type Union = Char & User;
+
+                let player: Union = {
+                        id: 1,
+                        level: 12,
+                        login: 'Maumaus',
+                        nickname: 'Mau mau',
+                        password: 'Teste123',
+                }
