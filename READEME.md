@@ -606,3 +606,9 @@
                 adminId = 1
                 adminId = 'A'
                 adminId;
+
+*Type Assertion (Asserção de tipo)*
+
+- Utilizado quando o TS "não sabe" qual a tipagem e queremos que o TS "acredite no que estamos declarando"
+
+        - Por exemplo, quando consumimos APIs
