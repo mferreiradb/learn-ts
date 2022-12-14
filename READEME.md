@@ -650,3 +650,26 @@
                 }
 
                 const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123', isAdmin: true};
+
+- Propriedades opcionais de um objeto
+
+        - Para definir uma propriedade como opcional, basta adicionar uma interrgação ao final da declaração da propriedade, antes do tipo
+
+                type User= {
+                id: number;
+                login: string;
+                password: string;
+                isAdmin: boolean;
+                }
+
+                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123'}; // GERA ERRO
+                //
+                //
+                type User= {
+                id: number;
+                login: string;
+                password: string;
+                isAdmin?: boolean;
+                }
+
+                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123'}; // OK
