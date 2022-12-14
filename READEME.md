@@ -612,3 +612,15 @@
 - Utilizado quando o TS "não sabe" qual a tipagem e queremos que o TS "acredite no que estamos declarando"
 
         - Por exemplo, quando consumimos APIs
+
+- Cria-se um type e define-se a variável com as
+
+                type UserResponse = {
+                        ui: number;
+                        name: string;
+                        avatar: string;
+                }
+
+                let userRes = {} as UserResponse;
+
+
