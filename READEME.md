@@ -587,3 +587,22 @@
 - Pode-se adicionar uma regra que faça com que o Generic assuma um determinado tipo caso o desenvolvedor não o faça, basta utilizar o oiperador de atribuição na declaração do generic
 
                 function useState<T extends number | string = string>(){
+
+*Types*
+
+- Reaproveitar tipos
+
+- Quando houver a necessidade de variáveis receberem valores de mesmo tipo para o mesmo contexto, pode-se criar um tipo específico para àquelas variáveis
+
+                type IdType = string | number | undefined;
+
+                let userId: IdType;
+                let adminId: IdType;
+
+                userId = 1
+                userId = 'A'
+                userId = true // GERA ERRO
+
+                adminId = 1
+                adminId = 'A'
+                adminId;
