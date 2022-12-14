@@ -673,3 +673,27 @@
                 }
 
                 const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123'}; // OK
+
+*Intersecção de tipos*
+
+- Usado quando queremos definir que um objeto terá propriedades de dois ou mais types
+
+- Usado quando queremos definir que uma variável terá valores permitidos de dois ou mais types
+
+        - Cria-se um novo type, que será a união de todos os types desejados, de forma que a variável criada com o novo type, passa a poder receber valores com os tipos de todos os types unidos
+
+        - Cria-se um novo type, que será a união de todos os types desejados, de forma que o objeto criado com o novo type, passa a poder receber as propriedades de todos os types unidos
+
+                type User= {
+                        id: number;
+                        login: string;
+                        password: string;
+                        isAdmin?: boolean;
+                }
+
+                type Char = {
+                        nickname: string;
+                        level: number;
+                }
+
+                type Union = Char & User;
