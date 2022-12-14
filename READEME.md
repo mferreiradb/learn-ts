@@ -707,3 +707,19 @@
                         nickname: 'Mau mau',
                         password: 'Teste123',
                 }
+
+*Interface*
+
+- Outra forma de declarar e criar tipos
+
+                interface UserRes {
+                        id: number;
+                        login: string;
+                        isAdmin?: boolean;
+                }
+
+                let playerRes: UserRes = {
+                        id: 1,
+                        login: 'Maumaus',
+                        isAdmin: true
+                }
