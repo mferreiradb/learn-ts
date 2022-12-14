@@ -711,15 +711,38 @@
 *Interface*
 
 - Outra forma de declarar e criar tipos
+        
+        - Declaração de interface
 
-                interface UserRes {
+                interface IUser {
                         id: number;
                         login: string;
+                        password: string;
                         isAdmin?: boolean;
                 }
 
-                let playerRes: UserRes = {
-                        id: 1,
-                        login: 'Maumaus',
-                        isAdmin: true
+                interface IChar {
+                        nickname: string;
+                        level: number;
                 }
+
+        - Intersecção(União) de interfaces
+        
+                interface IUnion extends IChar, IUser {}
+
+                let iPlayer: IUnion = {
+                        id: 1,
+                        level: 12,
+                        login: 'Maumaus',
+                        nickname: 'Mau mau',
+                        password: 'Teste123',
+                }
+
+
+*Types vs Interface*
+
+- Possuem os mesmos objetivos
+
+- Diferença sintatica
+
+- Interface é mais utilizado para POO, porém os objetivos são os mesmos
