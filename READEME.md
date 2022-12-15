@@ -878,3 +878,15 @@
                 let Mauricio: Personagem = new Personagem(nome, 32, 54, 100)
                 console.log(Sansa)
                 console.log(Mauricio)
+
+*Adicionando TypeScript a um projeto JavaScript*
+
+- Realiza-se as instalações do TS e do arquivo tsconfig.json
+
+- Altera-se as extensões dos arquivos para .ts ou .tsx
+
+- Faz-se a definição dos tipos nos arquivos
+
+- Caso seja um projeto em React, dever ser feita a instalação dos tipos para React
+
+                npm i --save-dev @types/react
