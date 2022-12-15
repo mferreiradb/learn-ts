@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/mferreiradb/learn-ts/issues"
   },
-  "homepage": "https://github.com/mferreiradb/learn-ts#readme"
+  "homepage": "https://github.com/mferreiradb/learn-ts#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/prompt-sync": "^4.2.0"
+  }
 }
