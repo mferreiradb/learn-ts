@@ -629,13 +629,13 @@
 
 - Cria-se um type e define-se a variável com as
 
-                type UserResponse = {
-                        ui: number;
-                        name: string;
-                        avatar: string;
-                }
+                                type UserResponse = {
+                                        ui: number;
+                                        name: string;
+                                        avatar: string;
+                                }
 
-                let userRes = {} as UserResponse;
+                                let userRes = {} as UserResponse;
 
 
 *Objetos*
@@ -644,49 +644,49 @@
 
 - Os objetos relacionados a este, recebem o tipo do type definido
 
-                type Point= {
-                        x: number;
-                        y: number;
-                }
+                                type Point= {
+                                        x: number;
+                                        y: number;
+                                }
 
-                function printCoord(points: Point): void {
-                        console.log(`O eixo x é: ${points.x} e o eixo y é: ${points.y}`)
-                }
+                                function printCoord(points: Point): void {
+                                        console.log(`O eixo x é: ${points.x} e o eixo y é: ${points.y}`)
+                                }
 
-                printCoord({x: 12, y: 10});
-                //
-                //
-                type User= {
-                        id: number;
-                        login: string;
-                        password: string;
-                        isAdmin: boolean;
-                }
+                                printCoord({x: 12, y: 10});
+                                //
+                                //
+                                type User= {
+                                        id: number;
+                                        login: string;
+                                        password: string;
+                                        isAdmin: boolean;
+                                }
 
-                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123', isAdmin: true};
+                                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123', isAdmin: true};
 
 - Propriedades opcionais de um objeto
 
         - Para definir uma propriedade como opcional, basta adicionar uma interrgação ao final da declaração da propriedade, antes do tipo
 
-                type User= {
-                id: number;
-                login: string;
-                password: string;
-                isAdmin: boolean;
-                }
+                                type User= {
+                                id: number;
+                                login: string;
+                                password: string;
+                                isAdmin: boolean;
+                                }
 
-                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123'}; // GERA ERRO
-                //
-                //
-                type User= {
-                id: number;
-                login: string;
-                password: string;
-                isAdmin?: boolean;
-                }
+                                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123'}; // GERA ERRO
+                                //
+                                //
+                                type User= {
+                                id: number;
+                                login: string;
+                                password: string;
+                                isAdmin?: boolean;
+                                }
 
-                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123'}; // OK
+                                const newUSer: User = {id: 1, login: 'Mau mau', password: 'Teste123'}; // OK
 
 *Intersecção de tipos*
 
@@ -700,27 +700,27 @@
 
 - Cria-se o novo tipo usando o operador de atribuição, atribuindo os types desejados através do simbodo &
 
-                type User= {
-                        id: number;
-                        login: string;
-                        password: string;
-                        isAdmin?: boolean;
-                }
+                                type User= {
+                                        id: number;
+                                        login: string;
+                                        password: string;
+                                        isAdmin?: boolean;
+                                }
 
-                type Char = {
-                        nickname: string;
-                        level: number;
-                }
+                                type Char = {
+                                        nickname: string;
+                                        level: number;
+                                }
 
-                type Union = Char & User;
+                                type Union = Char & User;
 
-                let player: Union = {
-                        id: 1,
-                        level: 12,
-                        login: 'Maumaus',
-                        nickname: 'Mau mau',
-                        password: 'Teste123',
-                }
+                                let player: Union = {
+                                        id: 1,
+                                        level: 12,
+                                        login: 'Maumaus',
+                                        nickname: 'Mau mau',
+                                        password: 'Teste123',
+                                }
 
 *Interface*
 
@@ -728,29 +728,29 @@
         
         - Declaração de interface
 
-                interface IUser {
-                        id: number;
-                        login: string;
-                        password: string;
-                        isAdmin?: boolean;
-                }
+                                interface IUser {
+                                        id: number;
+                                        login: string;
+                                        password: string;
+                                        isAdmin?: boolean;
+                                }
 
-                interface IChar {
-                        nickname: string;
-                        level: number;
-                }
+                                interface IChar {
+                                        nickname: string;
+                                        level: number;
+                                }
 
-        - Intersecção(União) de interfaces
-        
-                interface IUnion extends IChar, IUser {}
+                        - Intersecção(União) de interfaces
+                        
+                                interface IUnion extends IChar, IUser {}
 
-                let iPlayer: IUnion = {
-                        id: 1,
-                        level: 12,
-                        login: 'Maumaus',
-                        nickname: 'Mau mau',
-                        password: 'Teste123',
-                }
+                                let iPlayer: IUnion = {
+                                        id: 1,
+                                        level: 12,
+                                        login: 'Maumaus',
+                                        nickname: 'Mau mau',
+                                        password: 'Teste123',
+                                }
 
 
 *Types vs Interface*
@@ -771,6 +771,12 @@
 
 - Encapsulamento
 
+        - Tem o objetivo de proteger os atibutos da classe
+
+        - Modiicadores de acesso
+
+                - Definem a exposição dos membros da classe
+
 - Classes
 
         - Possui atributos e funções
@@ -779,16 +785,16 @@
 
         - Pode ter o valor das propriedades inicializado no ato da ceclaração
 
-                export class Personagem {
-                        nome?: string = '';
-                        energia?: number = 0;
-                        ataque?: number = 0;
-                        defesa?: number = 0;
-                }
+                                export class Personagem {
+                                        nome?: string = '';
+                                        energia?: number = 0;
+                                        ataque?: number = 0;
+                                        defesa?: number = 0;
+                                }
 
-                let Sansa: Personagem = new Personagem;
+                                let Sansa: Personagem = new Personagem;
 
-                Sansa.nome = 'Sansa'
+                                Sansa.nome = 'Sansa'
 
 - Objetos
 
