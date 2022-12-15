@@ -1,4 +1,4 @@
-import {Personagem} from "./Personagem";
+import Personagem from "./Personagem";
 import prompt from "prompt-sync";
 
 let person: Personagem = new Personagem("Sansa Stark", 100, 40, 20, 20);
@@ -7,7 +7,7 @@ let teclado = prompt();
 let option: number = 0;
 
 while (option != 9 || person.isDead()) {
-    console.log("+========= Personagem =============+");
+    console.log(`+========= Personagem ${person.nome}=============`);
     console.log("|1. Treinar ataque                 |");
     console.log("|2. Treinar defesa                 |");
     console.log("|3. Descansar                      |");
@@ -21,6 +21,7 @@ while (option != 9 || person.isDead()) {
     switch (option) {
         case 1:
             person.treinarAtacar();
+
             console.log(person.status());
             break;
         case 2:

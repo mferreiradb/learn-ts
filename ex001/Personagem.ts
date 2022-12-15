@@ -1,14 +1,24 @@
-export class Personagem {
-
+export default class Personagem {
     constructor(
-      public nome: string,
-      public energia: number,
-      public vida: number,
-      public ataque: number,
-      public defesa: number,
-    ) { }
+        private _nome: string,
+        private energia: number,
+        private vida: number,
+        private ataque: number,
+        private defesa: number
+    ) {}
 
-    status(): string {
+    //  TODA VEZ QUE PENSAR EM LER DADOS NA CLASSE - USE PARAMETRO
+    //  TODA VEZ QUE PENSAR EM IMPRIMIR NA CLASSE, USE RETORNO
+
+    public get nome(): string {
+        return this._nome;
+    }
+
+    public set nome(nome: string) {
+        this._nome = nome;
+    }
+
+    public status(): string {
         return (
             "Guerreiro: \n" +
             "\nNome: " +
@@ -18,32 +28,36 @@ export class Personagem {
             ("\nDefesa: " + this.defesa.toFixed(1))
         );
     }
-    treinarAtacar(): void {
-        this.ataque += Math.random() * 7;
-        this.energia -= Math.random() * 10;
+    public treinarAtacar(): void {
+        this.ataque += this.randomizar(7);
+        this.energia -= this.randomizar(5);
         if (this.defesa > 100) {
             this.defesa = 0;
         }
     }
-    treinarDefesa(): void {
-        this.defesa += Math.random() * 5;
-        this.energia -= Math.random() * 10;
+    public treinarDefesa(): void {
+        this.defesa += this.randomizar(5);
+        this.energia -= this.randomizar(10);
         if (this.defesa > 100) {
             this.defesa = 0;
         }
     }
-    descansar(hour: number): void {
-        this.energia += hour * (Math.random() * 10);
+    public descansar(hour: number): void {
+        this.energia += hour * this.randomizar(10);
         if (this.energia > 100) {
             this.energia = 100;
         }
     }
-    batalhar(): number {
-        let desgaste: number = Math.random() * 100;
+    public batalhar(): number {
+        let desgaste: number = this.randomizar(10);
         this.energia -= desgaste;
         return desgaste;
     }
-    isDead(): boolean {
+    public isDead(): boolean {
         return this.energia < 0;
     }
-  }
+
+    private randomizar(fator: number): number {
+        return Math.random() * fator;
+    }
+}
