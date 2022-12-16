@@ -771,11 +771,124 @@
 
 - Encapsulamento
 
+        - Propõe de isolar o máximo possível as classes, de forma a esconder detalhes de funcionamento interno
+
+        - Visa aumentar a fliexibilidade e memelhorar a manutenção e aumentar a extensibilidade do Software
+
         - Tem o objetivo de proteger os atibutos da classe
 
         - Modiicadores de acesso
 
+        - Quando não definido explicitamente, o padão é public
+
                 - Definem a exposição dos membros da classe
+
+                - Definir a visinilidade dos atributos, métodos e classes
+
+                        - public (+)
+
+                                - Público para qualquer arquivo, classe que esteja no mesmo projeto
+
+                                - Não recomendado para uso indiscriminado
+
+                                - Usa-se apenas para métodos e atributos que desejemos deixar acessíveis para outras classes/arquivos
+
+                        - private (-)
+
+                                - É o modificador mais reservado
+
+                                - Nenhum elemento fora da classe pode acessar
+
+                                - Mais utilizado e mais recomendado
+
+                                - Normalmente, define-se atributos como private
+
+                                - Métodos serão privados quando fornecerem serviços apenas à própria classe
+
+                        - proteced (#)
+
+                                - Vísivel apenas por classes herdadas
+
+                                - Utilizado apenas em heranças
+
+        - Métodos de acesso
+
+                - Têm a funcionalidade de prover acesso aos atributos privados que julgamos ter de acessar
+
+                - Poder controlar como as informações entram e saem
+
+                - Ao tentar acessar o dado exportado, o acesso deverá ser feito pelo nome do método, não do atributo original
+
+                - get
+
+                        - Retornam o tipo do atributo que será provido o acesso
+
+                        - Permite exibir o valor do atributo ou retorno
+
+                        - Não recebem parametro
+
+                        - Seu nome é composto pelo prefixo "get" seguido do nome do atributo que o acesso será provido
+
+                                export default class Personagem {
+                                constructor(
+                                        private _nome: string,
+                                        private energia: number,
+                                        private vida: number,
+                                        private ataque: number,
+                                        private defesa: number
+                                ) {}
+
+                                public get nome(): string {
+                                        return this._nome;
+                                }
+
+                - set
+
+                        - Prover modificação aos atributos privados que devem ser modificados
+
+                        - O retorno sempre será vazio
+
+                        - Recebe por parametro o novo dado a ser inserido
+
+                        - Seu nome é composto pelo prefixo "set" seguido do nome do atributo que o acesso será provido
+
+                                export default class Personagem {
+                                constructor(
+                                        private _nome: string,
+                                        private energia: number,
+                                        private vida: number,
+                                        private ataque: number,
+                                        private defesa: number
+                                ) {}
+
+                                public set getNome(nome: string) {
+                                        if (this._nome.length > 2) {
+                                                this._nome = nome;
+                                        } else {
+                                                throw new Error("Falha na validação dos dados. Verifique o tamanho do nome")
+                                        }
+                                }
+                        
+                        - Ao tentar acessar o dado exportado, o acesso deverá ser feito pelo nome do método, não do atributo original. isto é, se quisermos saber o nome do Personagem, devemos consultar por getNome, pois o atributo nome é private. O acesso será feito por [person.getNome]
+
+                                class Pessoa {
+                                        private _name: string;
+
+                                        public set name(name: string) {
+                                                this._name = name
+                                        }
+                                        public get name() {
+                                                return this._name
+                                        }
+                                }
+
+                                let person: Pessoa = new Pessoa
+                                person.name = 'Mauricio'
+
+                                console.log(person.name)
+
+                        
+
 
 - Classes
 
@@ -867,13 +980,15 @@
         
         - Podemos declarar os atributos de uma classe no construtor, sem que precisemos definir dentro da própria classe. Dessa forma também faz-se necessária a definição dos valores na instanciação do objeto. Dessa forma também não se faz mais necessário passar os valores através de this
 
+        - Por convenção, podemos declarar o nome dos atribudos precedidos de um underline, para que não haja duplicidade com outros tipos de dados
+
                 class Personagem {
 
                 constructor(
-                        public nome: string,
-                        public energia: number,
-                        public ataque: number,
-                        public defesa: number,
+                        public _nome: string,
+                        public _energia: number,
+                        public _ataque: number,
+                        public _defesa: number,
                 ) {}
                 }
                 
