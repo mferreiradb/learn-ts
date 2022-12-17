@@ -7,7 +7,7 @@ let teclado = prompt();
 let option: number = 0;
 
 while (option != 9 || person.isDead()) {
-    console.log(`+========= Personagem ${person.Nome}=============`);
+    console.log("+========= Personagem =============+");
     console.log("|1. Treinar ataque                 |");
     console.log("|2. Treinar defesa                 |");
     console.log("|3. Descansar                      |");
@@ -21,7 +21,6 @@ while (option != 9 || person.isDead()) {
     switch (option) {
         case 1:
             person.treinarAtacar();
-
             console.log(person.status());
             break;
         case 2:
@@ -42,7 +41,6 @@ while (option != 9 || person.isDead()) {
         case 8:
             console.log(person.status());
             break;
-        case 9: 
         default:
             break;
     }

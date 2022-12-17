@@ -1,11 +1,21 @@
+import { Random } from "./util/random";
+
 export default class Personagem {
-    constructor(
-        private _nome: string,
-        private _energia: number,
-        private _vida: number,
-        private _ataque: number,
-        private _defesa: number
-    ) {}
+
+    protected _nome: string;
+    protected _energia: number;
+    protected _vida: number;
+    protected _ataque: number;
+    protected _defesa: number;
+
+    constructor(nome: string) {
+        this._nome = nome
+        this._vida = Random.getRandom(100, 200)
+        this._vida = Random.getRandom(100, 200)
+        this._energia = Random.getRandom(100, 200)
+        this._ataque = Random.getRandom(100, 200)
+        this._defesa = Random.getRandom(100, 200)
+    }
 
     //  TODA VEZ QUE PENSAR EM LER DADOS NA CLASSE - USE PARAMETRO
     //  TODA VEZ QUE PENSAR EM IMPRIMIR NA CLASSE, USE RETORNO
