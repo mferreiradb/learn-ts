@@ -1,7 +1,10 @@
 import Personagem from "./Personagem";
 import prompt from "prompt-sync";
+import { Random } from "./util/random";
 
-let person: Personagem = new Personagem("Sansa Stark");
+let random  = Random.getRandom(100,200);
+
+let person: Personagem = new Personagem("Sansa Stark", random, random, random, random);
 
 let teclado = prompt();
 let option: number = 0;

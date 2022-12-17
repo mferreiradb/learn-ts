@@ -1,5 +1,5 @@
 export class Util {
     public static randomizar(inicio: number, fim: number): number {
-        return inicio + Math.random() * (fim - inicio);
+        return inicio + Math.floor(Math.random() * (fim - inicio));
     }
 }

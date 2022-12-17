@@ -10,3 +10,5 @@ personagens.push(mage);
 personagens.push(priest);
 
 personagens.forEach((p) => console.log(p.atacar()));
+
+console.log(`Dano recebido: ${mage.defender(priest)}`)

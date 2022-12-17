@@ -16,4 +16,9 @@ export class Mage extends Personagem {
   public atacar(): string {
     return "Ataque do Mago";
   }
+
+  public defender(atacante: Personagem): number {
+    let result = this._vidaAtual - atacante.ataqueBase
+    return result
+  }
 }

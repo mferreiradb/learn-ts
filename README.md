@@ -951,9 +951,62 @@
 
                 - Parra que uma classe não seja extendida, deve-se definir o construtor como private
 
+        - DICA PARA CRIAÇÃO DE CLASSES
+
+                - Pode ser tomado como boa prática, porém não obrigarória, os seguintes atributos como padrões de uma Super Classe Abstrata a ser usada em projetos
+
+                        - id
+                        - createdAt
+                        - updatedAt
+                        - removedAt
+
 - Polimorfismo
 
-        - 
+        - Em uma chamada, podemos ter comportamentos com muitas formas
+
+        - Uma mesma função de uma Super Classe pode ter comportamentos diferentes em suas subclasses
+
+        - Caso não haja especificidade no método, o método será executado com o da Super Classe
+
+        - Cria-se o método na Super Classe e em suas subclasses cria-se a função com as especificidades desejadas
+
+        - O método na Super Classe será um método abstrato, sua implementação será dada nas subclasses
+
+        - Um método abstrato só pode estar contido em uma classe abstrada. Neste caso, basta que alteremos a classe para abstract class
+
+        - Uma classe abstrata é uma classe que não está finalizada. Uma classe abstrata não pode ser instanciada
+
+        - Uma classe abstrata serve apenas como uma classe que vai conter atributos e/ou métodos que serão comuns a outras classes/subclasses
+
+        - Uma classe abstrata continua podendo ser utilizada como tipo
+
+        - Uma sbclasse que extende uma classe abstrata deve ter todos os métodos abstratos da Super Classe Abstrata em questão
+
+        - Para que uma classe não tenha todos os métodos da classe abstrata que está sendo extendida, esta subclasse também deve ser abstrata, e por sua vez não poderá ser instanciada, tendo que ser feita uma nova classe para que seja instanciada
+
+        - Abstract
+
+                - Método que não possui uma implementação definida
+
+                                        import { Util } from "./util/Util";
+
+                                        export abstract class Personagem {
+                                        protected _nome: string;
+                                        protected _armadura: number;
+                                        protected _vidaMaxima: number;
+                                        protected _vidaAtual: number;
+
+                                        constructor(nome: string) {
+                                                this._nome = nome;
+                                                this._armadura = Util.randomizar(100, 1_000);
+                                                this._vidaMaxima = Util.randomizar(100, 1_000);
+                                                this._vidaAtual = Util.randomizar(40, this._vidaMaxima);
+                                        }
+
+                                        public abstract atacar(): string;
+
+                                        public abstract defender(atacante: Personagem): number;
+                                }
 
 - Classes
 
