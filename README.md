@@ -765,76 +765,6 @@
 
 - Abstração
 
-- Herança
-
-        - Uma classe herda métodos e atributos de outra
-
-        - Uma classe pode extender apenas uma classe
-
-                - Sem Herança Multipla
-
-        - Cria-se uma Super Classe que guarda os atributos e métodos que devem estar em todas as subclasses e em cada subclasse, faz-se as especificidade
-
-        - As subclasses não possuem acesso ao que for private, para que as subclasses tenham acesso, o modificador deve ser protected
-
-        - O numero de atributos da subclasse deve ser igual ou maior ao numero de atributos da Super Classe
-
-        - Abaixo do construtor da subclasse, na primeira linha do construtor, deve ser chamado o construtor da Super Classe, através do método super(). Super receberá como parametro os atributos definidos no construtor da Super Classe
-
-        - Podemos manipular os atributos da Super Classe nas subclasses através de chamadas this como se os atributos estivessem definidos nas subclasses
-
-                                export default class Personagem {
-
-                                protected _nome: string;
-                                protected _energia: number;
-                                protected _vida: number;
-                                protected _ataque: number;
-                                protected _defesa: number;
-
-                                constructor(nome: string) {
-                                                this._nome = nome
-                                                this._vida = Random.getRandom(100, 200)
-                                                this._vida = Random.getRandom(100, 200)
-                                                this._energia = Random.getRandom(100, 200)
-                                                this._ataque = Random.getRandom(100, 200)
-                                                this._defesa = Random.getRandom(100, 200)
-                                        }
-                                }
-                                //
-                                //
-                                import Personagem from "./Personagem";
-                                import { Random } from "./util/random";
-
-                                class Warrior extends Personagem{
-                                private _forca: number;
-                                private _agilidade: number;
-
-                                constructor(nome: string) {
-                                                super(nome)
-                                                this._forca = Random.getRandom(100, 200)
-                                                this._agilidade = Random.getRandom(100, 200)
-                                                this._ataque = Random.getRandom(200, 400)
-                                        }
-                                }
-
-        - Ao instanciar a classe, podemos definir que o objeto é do tipo da Super Classe e sua instanciação é o tipo da subclasse
-
-                                let priest: Personagem = new Priest("Angelo priest");
-
-        - DICA PARA DETERMINAR SE DEVEMOS UTILIZAR HERANÇA
-
-                - Se a x é y, há herança, senão, há uma composição. Neste tipo de caso, deve-se criar um type ou interface, para que possamos definir corretamente o atributo
-
-                - Warrior é um personagem? Sim! Neste caso, há erança. Warrior deve extender uma classe Personagem
-
-                - Warrior é uma raça? Não! Neste caso, não há erança. Warrior não deve extender uma classe Raça. Cria-se um atributo raça, que pode receber um type ou interface Raça, ou outro tipo
-        
-        - IMPEDIR QUE UMA CLASSE SEJA HERDADA
-
-                - Parra que uma classe não seja extendida, deve-se definir o construtor como private
-
-- Polimorfismo
-
 - Encapsulamento
 
         - Propõe de isolar o máximo possível as classes, de forma a esconder detalhes de funcionamento interno
@@ -953,8 +883,77 @@
 
                                 console.log(person.name)
 
-                        
+- Herança
 
+        - Uma classe herda métodos e atributos de outra
+
+        - Uma classe pode extender apenas uma classe
+
+                - Sem Herança Multipla
+
+        - Cria-se uma Super Classe que guarda os atributos e métodos que devem estar em todas as subclasses e em cada subclasse, faz-se as especificidade
+
+        - As subclasses não possuem acesso ao que for private, para que as subclasses tenham acesso, o modificador deve ser protected
+
+        - O numero de atributos da subclasse deve ser igual ou maior ao numero de atributos da Super Classe
+
+        - Abaixo do construtor da subclasse, na primeira linha do construtor, deve ser chamado o construtor da Super Classe, através do método super(). Super receberá como parametro os atributos definidos no construtor da Super Classe
+
+        - Podemos manipular os atributos da Super Classe nas subclasses através de chamadas this como se os atributos estivessem definidos nas subclasses
+
+                                export default class Personagem {
+
+                                protected _nome: string;
+                                protected _energia: number;
+                                protected _vida: number;
+                                protected _ataque: number;
+                                protected _defesa: number;
+
+                                constructor(nome: string) {
+                                                this._nome = nome
+                                                this._vida = Random.getRandom(100, 200)
+                                                this._vida = Random.getRandom(100, 200)
+                                                this._energia = Random.getRandom(100, 200)
+                                                this._ataque = Random.getRandom(100, 200)
+                                                this._defesa = Random.getRandom(100, 200)
+                                        }
+                                }
+                                //
+                                //
+                                import Personagem from "./Personagem";
+                                import { Random } from "./util/random";
+
+                                class Warrior extends Personagem{
+                                private _forca: number;
+                                private _agilidade: number;
+
+                                constructor(nome: string) {
+                                                super(nome)
+                                                this._forca = Random.getRandom(100, 200)
+                                                this._agilidade = Random.getRandom(100, 200)
+                                                this._ataque = Random.getRandom(200, 400)
+                                        }
+                                }
+
+        - Ao instanciar a classe, podemos definir que o objeto é do tipo da Super Classe e sua instanciação é o tipo da subclasse
+
+                                let priest: Personagem = new Priest("Angelo priest");
+
+        - DICA PARA DETERMINAR SE DEVEMOS UTILIZAR HERANÇA
+
+                - Se a x é y, há herança, senão, há uma composição. Neste tipo de caso, deve-se criar um type ou interface, para que possamos definir corretamente o atributo
+
+                - Warrior é um personagem? Sim! Neste caso, há erança. Warrior deve extender uma classe Personagem
+
+                - Warrior é uma raça? Não! Neste caso, não há erança. Warrior não deve extender uma classe Raça. Cria-se um atributo raça, que pode receber um type ou interface Raça, ou outro tipo
+        
+        - IMPEDIR QUE UMA CLASSE SEJA HERDADA
+
+                - Parra que uma classe não seja extendida, deve-se definir o construtor como private
+
+- Polimorfismo
+
+        - 
 
 - Classes
 
