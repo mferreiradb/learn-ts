@@ -1190,6 +1190,14 @@
 
                         - Método sem retorno
 
+*Decorators*
+
+- Funções independentes
+
+- Não atreladas a classes específicas
+
+- Utilizadas e identificadas por meio de @
+
 *Adicionando TypeScript a um projeto JavaScript*
 
 - Realiza-se as instalações do TS e do arquivo tsconfig.json
