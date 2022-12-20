@@ -769,7 +769,7 @@
 
         - Propõe de isolar o máximo possível as classes, de forma a esconder detalhes de funcionamento interno
 
-        - Visa aumentar a fliexibilidade e memelhorar a manutenção e aumentar a extensibilidade do Software
+        - Visa aumentar a fliexibilidade e melhorar a manutenção e aumentar a extensibilidade do Software
 
         - Tem o objetivo de proteger os atibutos da classe
 
