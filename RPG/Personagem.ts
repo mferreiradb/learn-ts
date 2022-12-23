@@ -1,14 +1,16 @@
 import { Random } from "./util/random";
 
 export default class Personagem {
+    protected _nome: string;
+    protected _energia: number;
+    protected _vida: number;
+    protected _ataque: number;
+    protected _defesa: number;
 
     constructor(
-        protected _nome: string,
-        protected _energia: number,
-        protected _vida: number,
-        protected _ataque: number,
-        protected _defesa: number
+        protected nome: string
         ) {
+        this._nome = nome
         this._vida = Random.getRandom(100, 200)
         this._vida = Random.getRandom(100, 200)
         this._energia = Random.getRandom(100, 200)

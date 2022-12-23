@@ -6,7 +6,7 @@
 
 - Para gerar tsconfig
 
-                tsc --init
+                tsc init
 
 - Para ser executado no navegador, é necessário compilar o código escrito em TS para JS
 
@@ -1190,6 +1190,12 @@
 
                         - Método sem retorno
 
+*Composição*
+
+- Reutilização de código
+
+- Componentização
+
 *Decorators*
 
 - Funções independentes
@@ -1209,9 +1215,3 @@
 - Caso seja um projeto em React, dever ser feita a instalação dos tipos para React
 
                 npm i --save-dev @types/react
-
-*Composição*
-
-- Reutilização de código
-
--
