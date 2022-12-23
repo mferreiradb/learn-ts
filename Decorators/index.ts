@@ -1,6 +1,7 @@
 import Hello from "./HelloDecorator";
 import sumDec from "./SumDecorator";
 
+@Hello('Hello')
   class Personagem {
     public nome?: string;
     public energia?: number;
