@@ -1196,6 +1196,8 @@
 
 - Componentização
 
+- Construir uma classe com outras classes
+
 *Decorators*
 
 - Funções independentes
