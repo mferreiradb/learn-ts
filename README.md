@@ -6,7 +6,7 @@
 
 - Para gerar tsconfig
 
-                tsc init
+                tsc --init
 
 - Para ser executado no navegador, é necessário compilar o código escrito em TS para JS
 
@@ -769,7 +769,7 @@
 
         - Propõe de isolar o máximo possível as classes, de forma a esconder detalhes de funcionamento interno
 
-        - Visa aumentar a fliexibilidade e memelhorar a manutenção e aumentar a extensibilidade do Software
+        - Visa aumentar a fliexibilidade e melhorar a manutenção e aumentar a extensibilidade do Software
 
         - Tem o objetivo de proteger os atibutos da classe
 
@@ -1209,7 +1209,10 @@
 - Caso seja um projeto em React, dever ser feita a instalação dos tipos para React
 
                 npm i --save-dev @types/react
+<<<<<<< HEAD
 
 *Composição*
 
 - Reutilização de código
+=======
+>>>>>>> 147f92a7a2d155a87bc895058b0fe165d922d7ab
