@@ -6,7 +6,7 @@
 
 - Para gerar tsconfig
 
-                tsc init
+                tsc --init
 
 - Para ser executado no navegador, é necessário compilar o código escrito em TS para JS
 
