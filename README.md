@@ -1209,3 +1209,7 @@
 - Caso seja um projeto em React, dever ser feita a instalação dos tipos para React
 
                 npm i --save-dev @types/react
+
+*Composição*
+
+- Reutilização de código
