@@ -725,6 +725,7 @@
 *Interface*
 
 - Outra forma de declarar e criar tipos
+- Normalmente, se precisamos criar uma variável que é do tipo objeto, criamos uma Interface para que a variávei possa ter o tipo da interface
         
         - Declaração de interface
 
